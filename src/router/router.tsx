@@ -1,24 +1,19 @@
-import React, { useState } from 'react'
-import { Button, StyleSheet, View, Text } from 'react-native'
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Entypo, Feather, AntDesign } from '@expo/vector-icons'
 import {
-  Client,
-  ClientDetails,
-  Functionary,
-  Home,
-  Products,
-  Provider,
-} from './pages'
+  ClientRouter,
+  FunctionaryRouter,
+  HomeRouter,
+  ProductsRouter,
+  ProviderRouter,
+} from './index'
 
 const { Navigator, Screen } = createBottomTabNavigator()
-const SettingsStack = createNativeStackNavigator()
 
 export const Router = () => {
-  const [edit, setEdit] = useState(false)
-
   return (
     <Navigator
       initialRouteName="Home"
@@ -37,7 +32,7 @@ export const Router = () => {
       })}>
       <Screen
         name="Funcionários"
-        component={Functionary}
+        component={FunctionaryRouter}
         options={{
           tabBarIcon: ({ color, size }: any) => {
             return <Entypo name="v-card" size={size} color={color} />
@@ -47,33 +42,16 @@ export const Router = () => {
       />
       <Screen
         name="Clientes"
+        component={ClientRouter}
         options={{
           tabBarIcon: ({ color, size }: any) => {
             return <Feather name="users" size={size} color={color} />
           },
-        }}>
-        {() => (
-          <SettingsStack.Navigator>
-            <SettingsStack.Screen name="Clientes" component={Client} />
-            <SettingsStack.Screen
-              name="Detalhes"
-              component={ClientDetails}
-              options={() => ({
-                headerRight: () => (
-                  <Button
-                    onPress={() => setEdit(!edit)}
-                    title="editar"
-                    color={edit ? 'rgb(0, 172, 74)' : 'rgb(139, 139, 139)'}
-                  />
-                ),
-              })}
-            />
-          </SettingsStack.Navigator>
-        )}
-      </Screen>
+        }}
+      />
       <Screen
         name="Home"
-        component={Home}
+        component={HomeRouter}
         options={() => ({
           tabBarLabel: '',
           tabBarIcon: ({ size }: any) => (
@@ -91,7 +69,7 @@ export const Router = () => {
       />
       <Screen
         name="Produtos"
-        component={Products}
+        component={ProductsRouter}
         options={{
           tabBarIcon: ({ color, size }: any) => {
             return <Feather name="package" size={size} color={color} />
@@ -100,7 +78,7 @@ export const Router = () => {
       />
       <Screen
         name="Fornecedor"
-        component={Provider}
+        component={ProviderRouter}
         options={{
           tabBarIcon: ({ color, size }: any) => {
             return <Feather name="truck" size={size} color={color} />
