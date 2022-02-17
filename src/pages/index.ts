@@ -1,0 +1,6 @@
+export { Client } from './client'
+export { ClientDetails } from './clientDetails'
+export { Functionary } from './functionary'
+export { Home } from './home'
+export { Products } from './products'
+export { Provider } from './provider'
