@@ -14,3 +14,5 @@ installs..
 - yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 - yarn add @react-navigation/stack
 - yarn add expo-linear-gradient
+- yarn add @react-navigation/material-top-tabs react-native-tab-view
+- expo install react-native-pager-view

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SearchBar, PhotoUser } from '../../components'
+import { SearchBar } from '../../components'
 import { FUNCTIONARY_GROUP } from '../../constants'
 import {
   Container,

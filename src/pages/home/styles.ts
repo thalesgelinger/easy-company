@@ -1,7 +1,6 @@
 import styled from 'styled-components/native'
 
 export const Container = styled.View`
-  background-color: rgb(0, 78, 34);
   height: 100%;
 `
 
@@ -12,8 +11,7 @@ export const Header = styled.View`
   border-bottom-width: 2px;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 10px;
-  padding: 15px 0;
+  padding: 15px 10px;
 `
 
 export const SalesMade = styled.View`
@@ -36,7 +34,6 @@ export const SalesHistory = styled.TouchableOpacity`
 `
 
 export const Content = styled.View`
-  background-color: black;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   height: 90%;
