@@ -16,11 +16,11 @@ const { Navigator, Screen } = createBottomTabNavigator()
 export const Router = () => {
   return (
     <Navigator
-      initialRouteName="Home"
+      initialRouteName="Clientes"
       screenOptions={() => ({
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: 'rgb(19,20,24)',
+          // backgroundColor: 'rgb(19,20,24)',
           borderTopColor: 'transparent',
         },
         headerStyle: {

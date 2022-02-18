@@ -10,19 +10,7 @@ export const ClientRouter = () => {
   return (
     <Navigator>
       <Screen name="Clientes" component={Client} />
-      <Screen
-        name="Detalhes"
-        component={ClientDetails}
-        options={() => ({
-          headerRight: () => (
-            <Button
-              onPress={() => setEdit(!edit)}
-              title="editar"
-              color={edit ? 'rgb(0, 172, 74)' : 'rgb(139, 139, 139)'}
-            />
-          ),
-        })}
-      />
+      <Screen name="Detalhes" component={ClientDetails} />
     </Navigator>
   )
 }

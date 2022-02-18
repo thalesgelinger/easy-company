@@ -16,7 +16,7 @@ export const ListForm = ({ title, status, value, type }: ListPros) => {
       <TextInput
         editable={status}
         placeholder={value}
-        placeholderTextColor={'#ffffff9d'}
+        placeholderTextColor={`${status ? '#ffffff6f' : 'white'}`}
         keyboardType={type}
       />
     </Container>
