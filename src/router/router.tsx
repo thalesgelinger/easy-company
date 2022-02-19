@@ -16,7 +16,7 @@ const { Navigator, Screen } = createBottomTabNavigator()
 export const Router = () => {
   return (
     <Navigator
-      initialRouteName="Clientes"
+      initialRouteName="Fornecedor"
       screenOptions={() => ({
         headerShown: false,
         tabBarStyle: {

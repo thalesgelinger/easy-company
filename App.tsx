@@ -1,6 +1,5 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native'
-// import { NavigationContainer } from '@react-navigation/native'
 import {
   NavigationContainer,
   DefaultTheme,

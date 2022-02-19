@@ -1,26 +1,13 @@
 import React, { useState } from 'react'
-import { SearchBar } from '../../components'
+import { SearchBar, DropDownItens } from '../../components'
 import { FUNCTIONARY_GROUP } from '../../constants'
-import {
-  Container,
-  Title,
-  FlatList,
-  ButtonList,
-  NameFunctionary,
-} from './styles'
+import { Container, FlatList } from './styles'
 
 export const Functionary = ({ navigation }: any) => {
   const [list, setList] = useState({})
 
   const buttonItem = ({ item: functionaryGroup }: any) => {
-    return (
-      <ButtonList
-        onPress={() => {
-          // navigation.navigate('Detalhes', { functionaryGroup })
-        }}>
-        <NameFunctionary>{functionaryGroup.name}</NameFunctionary>
-      </ButtonList>
-    )
+    return <DropDownItens functionaryGroup={functionaryGroup} />
   }
 
   return (
@@ -33,18 +20,18 @@ export const Functionary = ({ navigation }: any) => {
       />
 
       <FlatList
-        data={FUNCTIONARY_GROUP}
+        data={list}
         renderItem={buttonItem}
         keyExtractor={item => item.id}
       />
       {/* isso sao o menus */}
-      <Title>Funcionários!</Title>
+      {/* <Title>Funcionários!</Title>
       <Title>-diarista</Title>
       <Title>-cortadores</Title>
       <Title>-cortador por diaria</Title>
       <Title>-add valores pago ao funcionario</Title>
       <Title>-operador de maquinaaaaaaaaaaaaaaaaaaaaaaaa</Title>
-      <Title>-motoristaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Title>
+      <Title>-motoristaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Title> */}
     </Container>
   )
 }

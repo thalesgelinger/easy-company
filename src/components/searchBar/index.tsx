@@ -5,7 +5,7 @@ import { Container, TextInput, OrderButton } from './styles'
 //TODO: retirar os any e por a prop correta
 interface SearchBarPros {
   setResultsFound: (a: object[]) => void
-  valueList: { nome: string }[]
+  valueList: { name: string }[]
   icon?: any
   title: string
 }
@@ -23,14 +23,14 @@ export const SearchBar = ({
       const newList = [...valueList]
 
       newList.sort((itemA, itemB) =>
-        itemA.nome > itemB.nome ? 1 : itemB.nome > itemA.nome ? -1 : 0,
+        itemA.name > itemB.name ? 1 : itemB.name > itemA.name ? -1 : 0,
       )
       setResultsFound(newList)
     } else {
       setResultsFound(
         valueList.filter(
           item =>
-            item.nome.toLowerCase().indexOf(searchText.toLowerCase()) > -1,
+            item.name.toLowerCase().indexOf(searchText.toLowerCase()) > -1,
         ),
       )
     }

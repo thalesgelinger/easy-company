@@ -17,12 +17,14 @@ export const ButtonList = styled.TouchableOpacity`
   background-color: rgba(0, 172, 75, 0.459);
   border-radius: 10px;
   flex-direction: row;
+  height: 65px;
   margin-bottom: 5px;
-  padding: 20px;
+  padding: 5px;
 `
 
 export const NameClient = styled.Text`
   color: white;
   font-size: 18px;
+  font-weight: 600;
   margin-left: 15px;
 `

@@ -1,1 +1,1 @@
-export { COSTOMER, FUNCTIONARY_GROUP } from './list'
+export { CLIENT, FUNCTIONARY_GROUP, PRODUCTS } from './list'

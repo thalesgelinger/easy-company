@@ -92,7 +92,7 @@ export const ClientDetails = ({ navigation, route }: any) => {
           <PhotoUser iten="" />
         </ContainerPhoto>
         <InfoText>
-          <ListForm title="Nome" status={edit} value={client.nome} />
+          <ListForm title="Nome" status={edit} value={client.name} />
           <ListForm
             title="Data de Nascimento"
             status={edit}

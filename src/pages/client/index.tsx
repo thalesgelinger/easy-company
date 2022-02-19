@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { PhotoUser, SearchBar } from '../../components'
-import { COSTOMER } from '../../constants'
+import { CLIENT } from '../../constants'
 import { Container, FlatList, ButtonList, NameClient } from './styles'
 
 export const Client = ({ navigation }: any) => {
@@ -13,7 +13,7 @@ export const Client = ({ navigation }: any) => {
           navigation.navigate('Detalhes', { client })
         }}>
         <PhotoUser iten="" />
-        <NameClient>{client.nome}</NameClient>
+        <NameClient>{client.name}</NameClient>
       </ButtonList>
     )
   }
@@ -22,7 +22,7 @@ export const Client = ({ navigation }: any) => {
     <Container>
       <SearchBar
         setResultsFound={setList}
-        valueList={COSTOMER}
+        valueList={CLIENT}
         icon="adduser"
         title="Pesquise um cliente"
       />
