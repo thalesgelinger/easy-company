@@ -16,7 +16,7 @@ export const SearchBar = ({
   const [searchText, setSearchText] = useState('')
 
   useEffect(() => {
-    if (searchText === '') {
+    if (searchText === '') { //TODO: i'm sure that you made the same thing in another component, wouldn't be better create a separeted hook for dealing with this?
       const newList = [...valueList]
 
       newList.sort((itemA, itemB) =>

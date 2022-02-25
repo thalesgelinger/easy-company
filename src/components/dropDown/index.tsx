@@ -23,6 +23,10 @@ export const DropDownItens = ({ functionaryGroup }: any) => {
         ) : (
           <MaterialIcons name="keyboard-arrow-down" size={24} color="white" />
         )}
+        {/*TODO: refact sugestion 
+          const dropDownIconName = dropDownItem ? "keyboard-arrow-up": "keyboard-arrow-down";
+          <MaterialIcons name={dropDownIconName} size={24} color="white" />
+        */}
       </ButtonList>
       {dropDownItem && (
         <Preview

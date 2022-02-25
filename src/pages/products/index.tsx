@@ -3,6 +3,7 @@ import { FlatList, Button, View } from 'react-native'
 
 import { Container, TitleProduct, ImageView, Title, Card } from './styles'
 
+// FIXME: remove comments
 export const Products = () => {
   return (
     <Container>

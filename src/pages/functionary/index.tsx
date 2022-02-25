@@ -5,14 +5,14 @@ import { SearchBar, DropDownItens } from '../../components'
 import { FUNCTIONARY_GROUP } from '../../constants'
 import { Container, FlatList } from './styles'
 
-export const Functionary = ({ navigation }: any) => {
+export const Functionary = ({ navigation }: any) => { //TODO: add the real types
   const [list, setList] = useState({})
 
-  const buttonItem = ({ item: functionaryGroup }: any) => {
+  const buttonItem = ({ item: functionaryGroup }: any) => { //TODO: add the real types and move this below hooks
     return <DropDownItens functionaryGroup={functionaryGroup} />
   }
 
-  React.useLayoutEffect(() => {
+  React.useLayoutEffect(() => { //TODO: remove React import
     navigation.setOptions({
       headerRight: () => (
         <TouchableOpacity
@@ -38,7 +38,7 @@ export const Functionary = ({ navigation }: any) => {
         renderItem={buttonItem}
         keyExtractor={item => item.id}
       />
-      {/* isso sao o menus */}
+      {/* isso sao o menus //FIXME: REMOVE THIS FUCKING COMMENTS BRO}
       {/* <Title>Funcionários!</Title>
       <Title>-diarista</Title>
       <Title>-cortadores</Title>

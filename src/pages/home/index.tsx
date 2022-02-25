@@ -56,7 +56,7 @@ export const Home = ({ navigation, name }: HomePros) => {
 }
 
 {
-  /* 
+  /* FIXME: REMOVE COMMENTS
 import { MotiText, MotiView, useAnimationState } from 'moti'
   <MotiView
 state={toggleState}

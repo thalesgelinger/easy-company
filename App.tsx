@@ -14,7 +14,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Router />
-        {/* <StatusBar /> */}
+        {/* <StatusBar /> */} //TODO: remove this line
       </NavigationContainer>
     </SafeAreaView>
   )

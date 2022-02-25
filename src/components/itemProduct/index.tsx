@@ -13,11 +13,11 @@ import {
 } from './styles'
 
 interface ItemProduct {
-  listAddedProducts: any
+  listAddedProducts: any //TODO: try to create a type for your products
 }
 
 export const ItemProduct = ({ listAddedProducts }: ItemProduct) => {
-  useEffect(() => {
+  useEffect(() => { //TODO: is this useful?
     console.log(listAddedProducts)
   }, [listAddedProducts])
 

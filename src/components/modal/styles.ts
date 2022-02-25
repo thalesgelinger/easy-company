@@ -23,7 +23,7 @@ export const ModalView = styled.View`
   elevation: 5;
 `
 
-// const styles = StyleSheet.create({
+// const styles = StyleSheet.create({ //FIXME: remove comments
 //   modalView: {
 //     margin: 20,
 //     backgroundColor: "white",

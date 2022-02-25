@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,useLayoutEffect } from 'react'
 import { Button, Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
@@ -14,7 +14,7 @@ import {
   AddVehicle,
 } from './styles'
 
-// colocar e tela com històrico de venda do cliente exibir
+// colocar e tela com històrico de venda do cliente exibir //TODO: remenber to ass a TODO: in comments
 // anexo de vale, ter observaçoes
 
 function SettingsScreen() {
@@ -26,8 +26,8 @@ function SettingsScreen() {
 }
 
 export const ClientDetails = ({ navigation, route }: any) => {
-  const { Navigator, Screen } = createMaterialTopTabNavigator()
-  const [edit, setEdit] = React.useState(false)
+  const { Navigator, Screen } = createMaterialTopTabNavigator() //TODO: put it outside your component
+  const [edit, setEdit] = React.useState(false) //TODO: remove React and import hooks directly
   const [client, setClient] = useState({})
 
   React.useLayoutEffect(() => {
@@ -44,10 +44,10 @@ export const ClientDetails = ({ navigation, route }: any) => {
 
   useEffect(() => {
     setClient(route.params.client)
-  })
+  }) //TODO: add empty dependency array
 
-  const ListVehicles = () => {
-    const ClientVehicles = ({ item: vehicles }: any) =>
+  const ListVehicles = () => { //FIXME: CREATE THIS COMPONENT INTO A SEPARETED FILE
+    const ClientVehicles = ({ item: vehicles }: any) => //TODO: add real types here the way i show you and move it to a separeted file as it it a component
       vehicles && (
         <VehicleItems>
           <ListForm

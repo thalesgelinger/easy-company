@@ -28,6 +28,7 @@ export const InputDropDown = ({
 
   useEffect(() => {
     if (searchText === '') {
+      // TODO: you could create a function to let more explicity what is happen here
       const newList = [...valueList]
 
       newList.sort((itemA, itemB) =>

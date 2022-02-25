@@ -16,7 +16,7 @@ export const ListForm = ({
   status,
   placeholder,
   type,
-}: ListPros) => {
+}: ListPros) => { //TODO: if you want to get all types included on TextInput you could make your interface extends TextInputProps
   return (
     <Container>
       <Text>{title}: </Text>

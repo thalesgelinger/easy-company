@@ -8,7 +8,7 @@ interface ButtonPros {
   functionValue: () => void
 }
 
-export const ButtonOnclick = ({
+export const ButtonOnclick = ({ //TODO: why do you chose this name?
   title,
   setChangeState,
   status,

@@ -23,7 +23,9 @@ export const Sales = ({ navigation }: any) => {
   const [listAddedProducts, setListAddedProducts] = useState<any[]>([])
   const totalItemValue = Number(quantity * value)
   const clientName = []
-  CLIENT.map(item => clientName.push(item.name))
+  CLIENT.map(item => clientName.push(item.name)) //TODO: you're not using map the reight way, remenber, map returns an array, if you want to keep this way, change map to forEach
+  // but if you want to know a better way for doing this, i recomend you make like, const clientName = CLIENT.map(item => item.name)
+
 
   React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -45,7 +47,7 @@ export const Sales = ({ navigation }: any) => {
     })
   }, [navigation, listAddedProducts])
 
-  useEffect(() => {}, [listAddedProducts])
+  useEffect(() => {}, [listAddedProducts]) //FIXME: is this usefull for something?
 
   const additem = () => {
     const item = {
@@ -113,7 +115,7 @@ export const Sales = ({ navigation }: any) => {
         />
       </ViewADD>
 
-      {/* {addItems && (
+      {/* {addItems && ( //FIXME: remove comments
         <Modall setModalVisible={setAddItems} modalVisible={addItems} />
       )} */}
       <ItemProduct listAddedProducts={listAddedProducts} />
