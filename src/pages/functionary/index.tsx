@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Button, TouchableOpacity } from 'react-native'
+import { AntDesign } from '@expo/vector-icons'
 import { SearchBar, DropDownItens } from '../../components'
 import { FUNCTIONARY_GROUP } from '../../constants'
 import { Container, FlatList } from './styles'
@@ -10,12 +12,24 @@ export const Functionary = ({ navigation }: any) => {
     return <DropDownItens functionaryGroup={functionaryGroup} />
   }
 
+  React.useLayoutEffect(() => {
+    navigation.setOptions({
+      headerRight: () => (
+        <TouchableOpacity
+          onPress={() => {
+            // navigation.navigate('Final da venda', { arraySales })
+          }}>
+          <AntDesign name="adduser" size={28} color="rgb(0, 172, 74)" />
+        </TouchableOpacity>
+      ),
+    })
+  }, [navigation])
+
   return (
     <Container>
       <SearchBar
         setResultsFound={setList}
         valueList={FUNCTIONARY_GROUP}
-        icon="plus"
         title="Pesquise um grupo"
       />
 

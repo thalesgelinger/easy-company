@@ -1,5 +1,7 @@
 export { ButtonOnclick } from './button'
 export { DropDownItens } from './dropDown'
+export { InputDropDown } from './inputDropDown'
+export { ItemProduct } from './itemProduct'
 export { ListForm } from './listForm'
 export { Loading } from './loading'
 export { Modall } from './modal'

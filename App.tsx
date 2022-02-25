@@ -9,12 +9,12 @@ import {
 import { Router } from './src/router'
 
 export default function App() {
-  const scheme = 'dark'
+  const scheme = '' //'dark'
   return (
     <SafeAreaView style={styles.container}>
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Router />
-        <StatusBar />
+        {/* <StatusBar /> */}
       </NavigationContainer>
     </SafeAreaView>
   )

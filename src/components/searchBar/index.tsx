@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import { AntDesign } from '@expo/vector-icons'
-import { Container, TextInput, OrderButton } from './styles'
+import { Container, TextInput } from './styles'
 
 //TODO: retirar os any e por a prop correta
 interface SearchBarPros {
   setResultsFound: (a: object[]) => void
   valueList: { name: string }[]
-  icon?: any
   title: string
 }
 
 export const SearchBar = ({
   setResultsFound,
   valueList,
-  icon,
   title,
 }: SearchBarPros) => {
   const [searchText, setSearchText] = useState('')
@@ -36,8 +33,6 @@ export const SearchBar = ({
     }
   }, [searchText])
 
-  function handleOrderClick() {}
-
   return (
     <Container>
       <TextInput
@@ -46,11 +41,6 @@ export const SearchBar = ({
         value={searchText}
         onChangeText={t => setSearchText(t)}
       />
-      {icon && (
-        <OrderButton onPress={handleOrderClick}>
-          <AntDesign name={icon} size={28} color="#FFF" />
-        </OrderButton>
-      )}
     </Container>
   )
 }

@@ -117,33 +117,19 @@ export const FUNCTIONARY_GROUP = [
 ]
 
 export const PRODUCTS = [
-  {
-    id: '1',
-    name: 'Draga',
-    products: ['areia branca', 'areia grossa'],
-  },
-  {
-    id: '2',
-    name: 'Pedreira',
-    products: [
-      'Pedra fina',
-      'Pedra média',
-      'Pedra grossa',
-      'Laje normal',
-      'Lajao',
-      'Laje grossa',
-      'Tijoleta normal',
-      'Tijoleta serrada',
-    ],
-  },
-  {
-    id: '3',
-    name: 'Saibreira',
-    products: ['Saibro'],
-  },
-  {
-    id: '4',
-    name: 'Terraplanagem',
-    products: ['BobCat', 'Caçamba', 'PC', 'Retro-escavadeira'],
-  },
+  'Areia média',
+  'Areia fina',
+  'Pedra fina',
+  'Pedra média',
+  'Pedra grossa',
+  'Laje normal',
+  'Lajao',
+  'Laje grossa',
+  'Tijoleta normal',
+  'Tijoleta serrada',
+  'Saibro',
+  'BobCat',
+  'Caçamba',
+  'PC',
+  'Retro-escavadeira',
 ]

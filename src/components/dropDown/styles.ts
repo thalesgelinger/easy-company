@@ -16,7 +16,7 @@ export const ButtonList = styled.TouchableOpacity`
 `
 
 export const NameFunctionary = styled.Text`
-  color: white;
+  /* color: white; */
   font-size: 18px;
   font-weight: 600;
   margin-left: 10px;
@@ -33,7 +33,7 @@ export const Preview = styled.TouchableOpacity`
 
 export const Title = styled.Text`
   align-items: center;
-  color: white;
+  /* color: white; */
   font-size: 14px;
   justify-content: center;
 `

@@ -6,10 +6,15 @@ import { Container } from './styles'
 
 interface SelectProps {
   item: any
+  setItemInclude: any
   setSelectedItem?: any
 }
 
-export const SelectDropDown = ({ item, setSelectedItem }: SelectProps) => {
+export const SelectDropDown = ({
+  item,
+  setItemInclude,
+  setSelectedItem,
+}: SelectProps) => {
   return (
     <Container>
       <SelectDropdown
@@ -17,7 +22,8 @@ export const SelectDropDown = ({ item, setSelectedItem }: SelectProps) => {
         // defaultValueByIndex={1}
         // defaultValue={'Draga'}
         onSelect={(ItemSelected, index) => {
-          // console.log(ItemSelected, index)
+          console.log(ItemSelected, index)
+          setItemInclude(ItemSelected)
           item[0] === 'Draga' && setSelectedItem(ItemSelected)
         }}
         defaultButtonText={'Selecione '}
@@ -53,10 +59,11 @@ export const SelectDropDown = ({ item, setSelectedItem }: SelectProps) => {
 
 const styles = StyleSheet.create({
   dropdown1BtnStyle: {
-    height: 45,
-    backgroundColor: '#FFF',
+    height: 35,
+    width: 170,
+    // backgroundColor: '#FFF',
     borderRadius: 10,
-    borderWidth: 1,
+    // borderWidth: 1,
     borderColor: '#444',
   },
   dropdown1BtnTxtStyle: { color: '#444', textAlign: 'left', fontSize: 16 },
